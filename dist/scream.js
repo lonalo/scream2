@@ -322,7 +322,7 @@ Scream = function Scream (config) {
         }
 		
 		if (!spec) {
-          spec = [(global.screen.width * 4), (global.screen.height * 4 - 39.5), (global.screen.height * 4), (global.screen.width * 4), global.devicePixelRatio, 'Crazy iPhone'];
+			spec = [(global.screen.width * 4), (global.screen.height * 4 - 39.5), (global.screen.height * 4), (global.screen.width * 4), global.devicePixelRatio, 'Crazy iPhone'];
         }
 
         return spec;
