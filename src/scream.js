@@ -137,6 +137,7 @@ Scream = function Scream (config) {
             [1280, 2114, 2272, 1280, 320, 568, 2, 'iPhone 5 or 5s'],
             [1500, 2510, 2668, 1500, 375, 667, 2, 'iPhone 6'],
             [1656, 2785, 2944, 1656, 414, 736, 3, 'iPhone 6 plus'],
+			[1500, 2509, 2668, 1500, 375, 667, 3, 'iPhone 6 plus (Zoomed)'],
             [3072, 3936, 4096, 2912, 768, 1024, 1, 'iPad 2'],
             [3072, 3938, 4096, 2914, 768, 1024, 2, 'iPad Air or Retina']
         ];
@@ -152,6 +153,10 @@ Scream = function Scream (config) {
 
                 break;
             }
+        }
+		
+		if (!spec) {
+          spec = [(global.screen.width * 4), (global.screen.height * 4 - 39.5), (global.screen.height * 4), (global.screen.width * 4), global.devicePixelRatio, 'Crazy iPhone'];
         }
 
         return spec;

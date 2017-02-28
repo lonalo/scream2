@@ -16,7 +16,7 @@ gulp.task('lint', function () {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('clean', ['lint'], function (cb) {
+gulp.task('clean', [], function (cb) {
     del(['./dist/'], cb);
 });
 
@@ -24,7 +24,7 @@ gulp.task('bundle', ['clean'], function () {
     return gulp
         .src('./src/scream.js')
         .pipe(browserify({
-            //debug : true
+            debug : true
         }))
         .pipe(gulp.dest('./dist/'));
 });
