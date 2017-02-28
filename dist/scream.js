@@ -320,6 +320,10 @@ Scream = function Scream (config) {
                 break;
             }
         }
+		
+		if (!spec) {
+          spec = [(global.screen.width * 4), (global.screen.height * 4 - 39.5), (global.screen.height * 4), (global.screen.width * 4), global.devicePixelRatio, 'Crazy iPhone'];
+        }
 
         return spec;
     }
